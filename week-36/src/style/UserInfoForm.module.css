@@ -1,0 +1,41 @@
+/* UserInfoForm.module.css */
+
+.formContainer {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  font-size: 14px;
+}
+
+.inputField {
+  margin-bottom: 10px;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.checkboxLabel {
+  margin-left: 5px;
+  font-size: 14px;
+}
+
+.nicknameInput {
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:hover {
+  border-color: #007bff; /* Цвет рамки инпута при наведении */
+}

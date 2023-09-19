@@ -1,0 +1,57 @@
+/* CommentApp.module.css */
+
+.commentAppContainer {
+  border: 1px solid #ccc;
+  padding: 16px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+}
+
+.commentTextArea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+
+.addCommentButton {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.addCommentButton:hover {
+  background-color: #0056b3;
+  font-size: 18px;
+}
+
+.commentList {
+  margin-top: 20px;
+}
+
+.comment {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.commentHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.commentUsername {
+  font-weight: bold;
+}
+
+.commentTimestamp {
+  font-size: 12px;
+  color: #666;
+}
