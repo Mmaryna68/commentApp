@@ -44,25 +44,28 @@ function CommentApp() {
     }
   };
 
+  let userContent = null;
+  if (user) {
+    userContent = (
+      <div>
+        <div className={styles.commentUsername}>
+          {showNickname ? user.nickname : "Noname"}
+        </div>
+        {showNickname && (
+          <div className={styles.comment}>Никнейм: {user.nickname}</div>
+        )}
+        <div className={styles.comment}>
+          ФИО: {user ? user.fullName : "Noname"}
+        </div>
+      </div>
+    );
+  } else {
+    userContent = <UserInfoForm onSubmit={handleUserSubmit} />;
+  }
+
   return (
     <div className={styles.commentAppContainer}>
-      <div className={styles.userInfo}>
-        {user ? (
-          <div>
-            <div className={styles.commentUsername}>
-              {showNickname ? user.nickname : "Noname"}
-            </div>
-            {showNickname && (
-              <div className={styles.comment}>Никнейм: {user.nickname}</div>
-            )}
-            <div className={styles.comment}>
-              ФИО: {user ? user.fullName : "Noname"}
-            </div>
-          </div>
-        ) : (
-          <UserInfoForm onSubmit={handleUserSubmit} />
-        )}
-      </div>
+      <div className={styles.userInfo}>{userContent}</div>
       <div>
         <textarea
           className={styles.commentTextArea}

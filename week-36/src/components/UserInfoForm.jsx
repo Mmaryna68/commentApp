@@ -58,7 +58,9 @@ function UserInfoForm({ onSubmit }) {
         <input
           type="checkbox"
           checked={showNickname}
-          onChange={() => setShowNickname(!showNickname)}
+          onChange={() =>
+            setShowNickname((prevShowNickname) => !prevShowNickname)
+          }
         />
         <label className={styles.checkboxLabel}>Показывать никнейм</label>
       </div>
